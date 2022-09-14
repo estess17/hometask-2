@@ -50,7 +50,7 @@ function Table(props: { notes: INote[], isSummary: boolean }) {
                 {!isSummary ?
                     (notes.length > 0 ?
                         notes.map(note => <NoteRow note={note} key={note.id}/>) :
-                        <td><h2>There are no notes yet...</h2></td>
+                        <tr><td><h2>There are no notes yet...</h2></td></tr>
                     ) :
                     summary.map(row => <SummaryRow summary={row} key={row.category}/>)
                 }

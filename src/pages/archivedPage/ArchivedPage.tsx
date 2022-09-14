@@ -11,7 +11,7 @@ function ArchivedPage() {
 
     return (
         <div className="container">
-            <Link to="/" className="back-btn">Go Back</Link>
+            <Link to={-1 as any} className="back-btn">Go Back</Link>
             <Table notes={archivedNotes} isSummary={false}/>
         </div>
     );

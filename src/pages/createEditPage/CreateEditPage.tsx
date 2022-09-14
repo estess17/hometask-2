@@ -13,6 +13,11 @@ function CreateEditPage() {
         content: '',
     });
 
+    const [errors, setErrors] = useState({
+        name: false,
+        content: false,
+    });
+
     const {id} = useParams();
     const {notes} = useAppSelector(state => state.notes);
     const [note, setNote] = useState<INote | null>(null);
@@ -34,46 +39,54 @@ function CreateEditPage() {
         }
     }, [id, note, notes]);
 
-
     const onInputChange = (e: any) => setFormData({
         ...formData,
         [e.target.name]: e.target.value,
     });
 
-    const onSubmitClick = () => {
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+
         let dates = formData.content.match(/(\d{1,2}([.\-/])\d{1,2}([.\-/])\d{4})/g);
 
-        if (id && note) {
-            const updatedNote: INote = {
-                ...note,
-                name: formData.name,
-                content: formData.content,
-                category: formData.category,
-                dates: dates ? dates.join(', ') : ''
-            };
-
-            dispatch(editNote(updatedNote));
+        if (!formData.name || !formData.content) {
+            setErrors({
+                name: !formData.name,
+                content: !formData.content,
+            });
         } else {
-            const newNote: INote = {
-                id: Math.random(),
-                name: formData.name,
-                created: new Date().toLocaleDateString('default', {month: 'long', day: '2-digit', year: 'numeric'}),
-                category: formData.category,
-                content: formData.content,
-                dates: dates ? dates.join(', ') : '',
-                isArchive: false,
-            };
+            if (id && note) {
+                const updatedNote: INote = {
+                    ...note,
+                    name: formData.name,
+                    content: formData.content,
+                    category: formData.category,
+                    dates: dates ? dates.join(', ') : '',
+                };
 
-            dispatch(createNote(newNote));
+                dispatch(editNote(updatedNote));
+            } else {
+                const newNote: INote = {
+                    id: Math.random(),
+                    name: formData.name,
+                    created: new Date().toLocaleDateString('default', {month: 'long', day: '2-digit', year: 'numeric'}),
+                    category: formData.category,
+                    content: formData.content,
+                    dates: dates ? dates.join(', ') : '',
+                    isArchive: false,
+                };
+
+                dispatch(createNote(newNote));
+            }
+
+            navigate(-1);
         }
-
-        navigate('/');
     };
 
     return (
         <div className="container" style={{maxWidth: 660}}>
-            <Link to="/" className="back-btn">Go Back</Link>
-            <form className="form">
+            <Link to={-1 as any} className="back-btn">Go Back</Link>
+            <form className="form" onSubmit={handleSubmit}>
                 <label>
                     Name:
                     <input type="text"
@@ -82,6 +95,7 @@ function CreateEditPage() {
                            name="name"
                            value={formData.name}
                            onChange={event => onInputChange(event)}
+                           style={{borderColor: errors.name ? 'red' : ''}}
                     />
                 </label>
                 <label>
@@ -103,10 +117,11 @@ function CreateEditPage() {
                               name="content"
                               value={formData.content}
                               onChange={event => onInputChange(event)}
+                              style={{borderColor: errors.content ? 'red' : ''}}
                     />
                 </label>
 
-                <button className="form-btn" onClick={onSubmitClick}>{id ? 'Edit' : 'Create'} Note</button>
+                <button className="form-btn" type="submit">{id ? 'Edit' : 'Create'} Note</button>
             </form>
         </div>
     );
