@@ -18,6 +18,12 @@
     padding: 10px;
     font-family: Arial, sans-serif;
     font-size: 14px;
+    border: 1px solid #cccccc;
+    outline: none;
+
+    &:focus {
+      border: 1px solid #696969;
+    }
   }
 
   &-btn {
@@ -26,3 +32,4 @@
     cursor: pointer;
   }
 }
+
