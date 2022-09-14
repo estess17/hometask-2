@@ -64,10 +64,10 @@ const initialState: notesState = {
         },
         {
             id: 6,
-            name: 'This is note',
+            name: 'This is noteRow',
             created: 'December 31,2021',
             category: 'Random Thought',
-            content: 'note content',
+            content: 'noteRow content',
             dates: '',
             isArchive: false,
         },
