@@ -4,13 +4,12 @@
     <list default="true" id="e7786b1a-2d9a-415a-a5b0-10b90f56a4c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Note/Note.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/note/Note.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/note/Note.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/noteRow/NoteRow.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/mainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mainPage/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/notes/notes.slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/notes/notes.slice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Forum" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -60,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663070898672</updated>
       <workItem from="1663070902294" duration="970000" />
-      <workItem from="1663147427816" duration="8283000" />
+      <workItem from="1663147427816" duration="11521000" />
     </task>
     <servers />
   </component>

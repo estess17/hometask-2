@@ -1,6 +1,6 @@
 import React from 'react';
 import {INote, ISummary} from '../../utils/interfaces';
-import {Note, SummaryRow} from '../index';
+import {NoteRow, SummaryRow} from '../index';
 import './table.scss';
 
 
@@ -49,7 +49,7 @@ function Table(props: { notes: INote[], isSummary: boolean }) {
             <tbody className="table-body">
                 {!isSummary ?
                     (notes.length > 0 ?
-                        notes.map(note => <Note note={note} key={note.id}/>) :
+                        notes.map(note => <NoteRow note={note} key={note.id}/>) :
                         <td><h2>There are no notes yet...</h2></td>
                     ) :
                     summary.map(row => <SummaryRow summary={row} key={row.category}/>)

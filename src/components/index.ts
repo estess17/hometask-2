@@ -1,6 +1,6 @@
 import Table from './table/Table';
-import Note from './note/Note';
+import NoteRow from './noteRow/NoteRow';
 import SummaryRow from './summaryRow/SummaryRow';
 
 
-export {Table, Note, SummaryRow};
+export {Table, NoteRow, SummaryRow};

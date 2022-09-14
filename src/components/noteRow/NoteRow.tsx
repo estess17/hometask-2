@@ -6,15 +6,17 @@ import editIcon from '../../assets/images/pen-to-square-solid.svg';
 import deleteIcon from '../../assets/images/trash-solid.svg';
 import {useAppDispatch} from '../../utils/hooks';
 import {archiveNote, deleteNote} from '../../store/notes/notes.slice';
+import {useNavigate} from 'react-router-dom';
 
 
-function Note(props: { note: INote }) {
+function NoteRow(props: { note: INote }) {
     const {note} = props;
 
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
 
     const onEditClick = (id: number) => {
-
+        navigate(`/edit/${id}`);
     }
 
     const onArchiveClick = (id: number) => {
@@ -41,4 +43,4 @@ function Note(props: { note: INote }) {
     );
 }
 
-export default Note;
+export default NoteRow;
