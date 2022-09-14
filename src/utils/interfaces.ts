@@ -7,3 +7,9 @@ export interface INote {
     dates: string,
     isArchive: boolean
 }
+
+export interface ISummary {
+    category: string,
+    active: number,
+    archived: number,
+}

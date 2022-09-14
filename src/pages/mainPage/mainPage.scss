@@ -1,0 +1,33 @@
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  a {
+    display: block;
+    width: 100px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .create  {
+    background-color: #19b900;
+    color: #f2f2f2;
+  }
+
+  .archived  {
+    background-color: #0088e3;
+    color: #f2f2f2;
+  }
+}
