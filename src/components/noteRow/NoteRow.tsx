@@ -28,16 +28,16 @@ function NoteRow(props: { note: INote }) {
     }
 
     return (
-        <tr>
-            <td>{note.name}</td>
-            <td>{note.created}</td>
-            <td>{note.category}</td>
-            <td>{cutText(note.content, 45)}</td>
-            <td>{note.dates}</td>
-            <td className="table-body__actions">
-                <img src={editIcon} alt="edit-icon" onClick={() => onEditClick(note.id)}/>
-                <img src={archiveIcon} alt="archive-icon" onClick={() => onArchiveClick(note.id)}/>
-                <img src={deleteIcon} alt="delete-icon" onClick={() => onDeleteClick(note.id)}/>
+        <tr className="even:bg-gray-200 hover:bg-gray-200 transition-all ease-in-out duration-100">
+            <td className="p-5">{note.name}</td>
+            <td className="p-5">{note.created}</td>
+            <td className="p-5">{note.category}</td>
+            <td className="p-5">{cutText(note.content, 45)}</td>
+            <td className="p-5">{note.dates}</td>
+            <td className="p-5 flex items-center select-none">
+                <img className="w-5 h-5 mr-2 cursor-pointer" src={editIcon} alt="edit-icon" onClick={() => onEditClick(note.id)}/>
+                <img className="w-5 h-5 mr-2 cursor-pointer" src={archiveIcon} alt="archive-icon" onClick={() => onArchiveClick(note.id)}/>
+                <img className="w-5 h-5 cursor-pointer" src={deleteIcon} alt="delete-icon" onClick={() => onDeleteClick(note.id)}/>
             </td>
         </tr>
     );
