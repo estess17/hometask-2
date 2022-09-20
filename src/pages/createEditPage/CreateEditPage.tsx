@@ -115,6 +115,7 @@ function CreateEditPage() {
                     <textarea placeholder="Content"
                               className="form-input"
                               name="content"
+                              
                               value={formData.content}
                               onChange={event => onInputChange(event)}
                               style={{borderColor: errors.content ? 'red' : ''}}

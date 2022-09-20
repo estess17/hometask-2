@@ -26,6 +26,10 @@
     }
   }
 
+  textarea {
+    resize: vertical;
+  }
+
   &-btn {
     align-self: flex-end;
     padding: 6px 16px;
