@@ -35,9 +35,12 @@ function NoteRow(props: { note: INote }) {
             <td className="p-5">{cutText(note.content, 45)}</td>
             <td className="p-5">{note.dates}</td>
             <td className="p-5 flex items-center select-none">
-                <img className="w-5 h-5 mr-2 cursor-pointer" src={editIcon} alt="edit-icon" onClick={() => onEditClick(note.id)}/>
-                <img className="w-5 h-5 mr-2 cursor-pointer" src={archiveIcon} alt="archive-icon" onClick={() => onArchiveClick(note.id)}/>
-                <img className="w-5 h-5 cursor-pointer" src={deleteIcon} alt="delete-icon" onClick={() => onDeleteClick(note.id)}/>
+                <img className="w-5 h-5 mr-2 cursor-pointer" src={editIcon}
+                     alt="edit-icon" onClick={() => onEditClick(note.id)}/>
+                <img className="w-5 h-5 mr-2 cursor-pointer" src={archiveIcon}
+                     alt="archive-icon" onClick={() => onArchiveClick(note.id)}/>
+                <img className="w-5 h-5 cursor-pointer" src={deleteIcon}
+                     alt="delete-icon" onClick={() => onDeleteClick(note.id)}/>
             </td>
         </tr>
     );

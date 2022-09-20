@@ -84,15 +84,13 @@ function CreateEditPage() {
 
     return (
         <div className="container" style={{maxWidth: 660}}>
-            <Link to={-1 as any} className="block w-28 my-4 py-1.5 bg-gray-500 text-gray-50 rounded text-center">
-                Go Back
-            </Link>
+            <Link to={-1 as any} className="btn bg-gray-500 my-4">Go Back</Link>
             <form className="flex flex-col p-4 bg-gray-100 rounded drop-shadow" onSubmit={handleSubmit}>
                 <label className="flex flex-col mb-3">
                     Name:
                     <input type="text"
                            placeholder="Name"
-                           className="p-3 mt-2 border border-solid border-gray-300 outline-none focus:border-gray-600"
+                           className="input"
                            name="name"
                            value={formData.name}
                            onChange={event => onInputChange(event)}
@@ -101,7 +99,7 @@ function CreateEditPage() {
                 </label>
                 <label className="flex flex-col mb-3">
                     Category:
-                    <select className="p-3 mt-2 border border-solid border-gray-300 outline-none focus:border-gray-600"
+                    <select  className="input"
                             name="category"
                             value={formData.category}
                             onChange={event => onInputChange(event)}
@@ -114,7 +112,7 @@ function CreateEditPage() {
                 <label className="flex flex-col mb-3">
                     Content:
                     <textarea placeholder="Content"
-                              className="p-3 mt-2 border border-solid border-gray-300 outline-none focus:border-gray-600"
+                              className="input"
                               name="content"
                               value={formData.content}
                               onChange={event => onInputChange(event)}
@@ -122,9 +120,7 @@ function CreateEditPage() {
                     />
                 </label>
 
-                <button className="self-end w-28 py-1.5 bg-green-500 text-gray-50 rounded text-center
-                       hover:bg-green-600 transition-colors ease-in-out"
-                        type="submit">
+                <button className="btn bg-green-500 hover:bg-green-600 self-end" type="submit">
                     {id ? 'Edit' : 'Create'} Note
                 </button>
             </form>

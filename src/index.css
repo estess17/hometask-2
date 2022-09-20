@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply block w-28 py-1.5 text-gray-50 rounded text-center transition-colors ease-in-out
+    }
+
+    .input {
+        @apply p-3 mt-2 border border-solid border-gray-300 outline-none focus:border-gray-600
+    }
+}

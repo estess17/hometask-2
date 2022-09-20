@@ -9,9 +9,7 @@ function ArchivedPage() {
 
     return (
         <div className="container">
-            <Link to={-1 as any} className="block w-28 my-4 py-1.5 bg-gray-500 text-gray-50 rounded text-center">
-                Go Back
-            </Link>
+            <Link to={-1 as any} className="btn bg-gray-500 my-4">Go Back</Link>
             <Table notes={archivedNotes} isSummary={false}/>
         </div>
     );

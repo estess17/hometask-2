@@ -14,13 +14,11 @@ function MainPage() {
 
             <div className="flex items-center justify-end">
                 <Link to="/archived"
-                      className="block w-28 mr-3 py-1.5 bg-blue-500 text-gray-50 rounded text-center
-                       hover:bg-blue-600 transition-colors ease-in-out">
+                      className="btn bg-blue-500 hover:bg-blue-600 mr-4">
                     Archived
                 </Link>
                 <Link to="/create"
-                      className="block w-28 py-1.5 bg-green-500 text-gray-50 rounded text-center
-                       hover:bg-green-600 transition-colors ease-in-out">
+                      className="btn bg-green-500 hover:bg-green-600">
                     Create Note
                 </Link>
             </div>
