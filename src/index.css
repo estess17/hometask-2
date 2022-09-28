@@ -8,6 +8,6 @@
     }
 
     .input {
-        @apply p-3 mt-2 border border-solid border-gray-300 outline-none focus:border-gray-600
+        @apply py-2 px-3 border border-solid border-gray-300 outline-none focus:border-gray-600
     }
 }

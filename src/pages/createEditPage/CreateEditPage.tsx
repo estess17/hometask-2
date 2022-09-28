@@ -3,6 +3,7 @@ import {Link, useNavigate, useParams} from 'react-router-dom';
 import {INote} from '../../utils/interfaces';
 import {useAppDispatch, useAppSelector} from '../../utils/hooks';
 import {createNote, editNote} from '../../store/notes/notes.slice';
+import {Input} from '../../components';
 
 
 function CreateEditPage() {
@@ -88,18 +89,16 @@ function CreateEditPage() {
             <form className="flex flex-col p-4 bg-gray-100 rounded drop-shadow" onSubmit={handleSubmit}>
                 <label className="flex flex-col mb-3">
                     Name:
-                    <input type="text"
+                    <Input type="text"
                            placeholder="Name"
-                           className="input"
                            name="name"
                            value={formData.name}
-                           onChange={event => onInputChange(event)}
-                           style={{borderColor: errors.name ? 'red' : ''}}
-                    />
+                           error={errors.name}
+                           onChange={(event: any) => onInputChange(event)}/>
                 </label>
                 <label className="flex flex-col mb-3">
                     Category:
-                    <select  className="input"
+                    <select className="input"
                             name="category"
                             value={formData.category}
                             onChange={event => onInputChange(event)}
@@ -111,13 +110,12 @@ function CreateEditPage() {
                 </label>
                 <label className="flex flex-col mb-3">
                     Content:
-                    <textarea placeholder="Content"
-                              className="input"
-                              name="content"
-                              value={formData.content}
-                              onChange={event => onInputChange(event)}
-                              style={{borderColor: errors.content ? 'red' : ''}}
-                    />
+                    <Input type="textarea"
+                           placeholder="Content"
+                           name="content"
+                           value={formData.content}
+                           error={errors.content}
+                           onChange={(event: any) => onInputChange(event)}/>
                 </label>
 
                 <button className="btn bg-green-500 hover:bg-green-600 self-end" type="submit">
