@@ -27,20 +27,20 @@ function Table(props: { notes: INote[], isSummary: boolean }) {
     return (
         <table className="w-full my-6 shadow rounded">
             <thead className="h-14 bg-gray-900 text-white text-left">
-            <tr>
+            <tr className="[&_th]:p-5">
                 {!isSummary ?
                     <>
-                        <th className="p-5">Name</th>
-                        <th className="p-5">Created</th>
-                        <th className="p-5">Category</th>
-                        <th className="p-5">Content</th>
-                        <th className="p-5">Dates</th>
-                        <th className="p-5">Actions</th>
+                        <th>Name</th>
+                        <th>Created</th>
+                        <th>Category</th>
+                        <th>Content</th>
+                        <th>Dates</th>
+                        <th>Actions</th>
                     </> :
                     <>
-                        <th className="p-5">Note Category</th>
-                        <th className="p-5">Active</th>
-                        <th className="p-5">Archived</th>
+                        <th>Note Category</th>
+                        <th>Active</th>
+                        <th>Archived</th>
                     </>
                 }
             </tr>
